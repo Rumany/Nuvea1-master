@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الغرف | Nuvea Hotel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- ملف التنسيق العام -->
+
+  <!-- ملف التنسيق الخاص بالغرف -->
+  <link rel="stylesheet" href="../css/rooms.css">
+</head>
+<body background-image>
+   <div class="background-overlay"></div>
+
+<!-- الهيدر -->
+<header>
+  <div class="d-flex align-items-center">
+    <img src="../images1/Logo/logo.png" alt="Nuvea Logo" class="logo">
+    <h4 class="text1-gold m-0 fw-bold">Nuvea Hotel</h4>
+  </div>
+
+  <!-- التحكم في القائمة -->
+  <input type="checkbox" id="menu-toggle" hidden>
+  <label for="menu-toggle" class="menu-icon">☰</label>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="../index.html">الرئيسية</a></li>
+      <li><a href="./booking.html">الحجز</a></li>
+      <li><a href="./contact.html" class="gold">تواصل معنا</a></li>
+      <li class="nav-item">
+  <a href="./login.html" class="nav-link login-btn">تسجسل خروج</a>
+</li>
+
+</header>
+
+
+<!--=====================الكارد================== -->
+<h1 class="title">غرف فندق Nuvea</h1>
+
+<div class="rooms-grid">
+
+  <!-- كارد 1: سنجل -->
+  <div class="room-card">
+
+    <input type="radio" name="view1" id="sea1" checked hidden>
+    <input type="radio" name="view1" id="garden1" hidden>
+    <input type="radio" name="view1" id="back1" hidden>
+    <input type="checkbox" id="more1" hidden>
+
+    <div class="image-container">
+      <span class="available">متاح الآن</span>
+      <img src="../images1/Room/room1.jpg" class="img-sea" alt="إطلالة بحرية">
+      <img src="../images1/Room/room2.jpg" class="img-garden" alt="إطلالة على الحديقة">
+      <img src="../images1/Room/room3.jpg" class="img-back" alt="إطلالة خلفية">
+    </div>
+
+    <h2>غرفة سنجل</h2>
+
+    <div class="views-list">
+      <label for="sea1" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على البحر</span>
+      </label>
+      <label for="garden1" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على الحديقة</span>
+      </label>
+      <label for="back1" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة خلفية</span>
+      </label>
+    </div>
+
+    <div class="desc-container">
+      <div class="desc desc-sea">
+        <p>إطلالة بحرية مذهلة مع شرفة خاصة على البحر مباشرة.</p>
+        <div class="price">السعر: <strong>1800 جنيه / الليلة</strong></div>
+      </div>
+
+      <div class="desc desc-garden">
+        <p>إطلالة جميلة على الحديقة مع منطقة جلوس خارجية.</p>
+        <div class="price">السعر: <strong>1600 جنيه / الليلة</strong></div>
+      </div>
+
+      <div class="desc desc-back">
+        <p>إطلالة خلفية مريحة ومناسبة للهدوء.</p>
+        <div class="price">السعر: <strong>1400 جنيه / الليلة</strong></div>
+      </div>
+    </div>
+
+    <label for="more1" class="more-btn">تعرف على المزيد</label>
+
+    <div class="more-details">
+      <div class="details details-sea">
+        <p>غرفة مفردة فسيحة مع سرير مريح كبير، توفر شرفة خاصة تطل مباشرة على البحر حيث يمكنك الاستمتاع بأصوات الأمواج والنسيم العليل. تحتوي الغرفة على جاكوزي صغير للاستجمام، تلفاز ذكي مع قنوات دولية، واي فاي مجاني عالي السرعة، مكتب للعمل أو الدراسة، وخزانة واسعة لتخزين الملابس والأمتعة. الحمام الخاص مزود بمستحضرات عناية فاخرة ومجفف شعر. الإضاءة الدافئة والديكور العصري يجعل الإقامة مريحة وممتعة.
+          </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-garden">
+        <p>غرفة مفردة هادئة مطلة على حديقة الفندق المزهرة، مع منطقة جلوس خارجية على الشرفة حيث يمكنك قراءة كتاب أو الاسترخاء. السرير المفرد مريح مع أغطية ناعمة، والحمام مجهز بجميع المستلزمات، بالإضافة إلى مكتب صغير للعمل. الغرفة توفر بيئة مثالية للهدوء والراحة بعيدًا عن صخب الفندق، مع تهوية طبيعية وإضاءة ناعمة.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-back">
+        <p>غرفة سنجل بعيدة عن الضوضاء مع إطلالة على المناطق الخلفية للفندق، مثالية للنزلاء الذين يفضلون الخصوصية والهدوء. السرير مريح، مع ألوان دافئة في الديكور. تحتوي الغرفة على منطقة جلوس، تلفاز، واي فاي، وحمام مجهز بالكامل. توفر الغرفة أيضًا مساحة كافية للتخزين والتنظيم، مع إضاءة هادئة لخلق أجواء مريحة للنوم والاسترخاء.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+    </div>
+
+  </div>  
+
+  <!-- كارد 2: دبل -->
+<div class="room-card">
+  <input type="radio" name="view2" id="sea2" checked hidden>
+  <input type="radio" name="view2" id="garden2" hidden>
+  <input type="radio" name="view2" id="back2" hidden>
+  <input type="checkbox" id="more2" hidden>
+
+  <div class="image-container">
+    <span class="available">متاح الآن</span>
+    <img src="../images1/Room/room5.jpg" class="img-sea sea2" alt="إطلالة بحرية">
+    <img src="../images1/Room/room4.jpg" class="img-garden garden2" alt="إطلالة على الحديقة">
+    <img src="../images1/Room/room6.jpg" class="img-back back2" alt="إطلالة خلفية">
+  </div>
+
+    <h2>غرفة دبل</h2>
+
+    <div class="views-list">
+      <label for="sea2" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على البحر</span>
+      </label>
+      <label for="garden2" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على الحديقة</span>
+      </label>
+      <label for="back2" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة خلفية</span>
+      </label>
+    </div>
+
+    <div class="desc-container">
+      <div class="desc desc-sea">
+        <p>إطلالة بحرية رومانسية مع سرير مزدوج كبير وشرفة.</p>
+        <div class="price">السعر: <strong>2500 جنيه / الليلة</strong></div>
+      </div>
+      <div class="desc desc-garden">
+        <p>إطلالة على الحديقة، مثالية للأزواج، مع منطقة جلوس.</p>
+        <div class="price">السعر: <strong>2300 جنيه / الليلة</strong></div>
+      </div>
+      <div class="desc desc-back">
+        <p>إطلالة خلفية هادئة، مناسبة للعائلات الصغيرة.</p>
+        <div class="price">السعر: <strong>2100 جنيه / الليلة</strong></div>
+      </div>
+    </div>
+
+    <label for="more2" class="more-btn">تعرف على المزيد</label>
+
+    <div class="more-details">
+      <div class="details details-sea">
+        <p>غرفة مزدوجة فسيحة تحتوي على سرير مزدوج كبير، شرفة مطلة على البحر مباشرة، منطقة جلوس مريحة مع أريكة صغيرة وطاولة، تلفاز ذكي، ثلاجة صغيرة، وخدمة واي فاي مجانية. الحمام مجهز بجاكوزي فاخر، دُش مع مياه ساخنة مستمرة، ومستلزمات استحمام عالية الجودة. الإضاءة الطبيعية خلال النهار تمنح الغرفة أجواءً مشرقة، بينما الإضاءة الليلية الدافئة توفر راحة كاملة للنوم.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-garden">
+        <p>غرفة مزدوجة هادئة ورومانسية، مطلة على الحديقة المزهرة، مع سرير مزدوج مريح، منطقة جلوس خارجية على الشرفة، حمام خاص مزود بجاكوزي للاسترخاء بعد يوم طويل، مكتب للعمل، وخزانة واسعة. الغرفة توفر أجواء مثالية للأزواج أو النزلاء الذين يحبون الطبيعة والهدوء، مع نوافذ كبيرة تسمح بدخول أشعة الشمس الطبيعية.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-back">
+        <p>غرفة مزدوجة بمساحة مريحة وهدوء كامل بعيد عن مناطق النشاط، مثالية للنوم والاسترخاء. تحتوي على سرير مزدوج فاخر، منطقة جلوس، تلفاز ذكي، واي فاي، حمام مجهز بالكامل، ومساحة لتخزين الأمتعة. الديكور عصري وألوان الغرفة هادئة، مع إضاءة خافتة توفر جوًا من الهدوء والاسترخاء.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- كارد 3: جناح -->
+<div class="room-card">
+  <input type="radio" name="view3" id="sea3" checked hidden>
+  <input type="radio" name="view3" id="garden3" hidden>
+  <input type="radio" name="view3" id="back3" hidden>
+  <input type="checkbox" id="more3" hidden>
+
+  <div class="image-container">
+    <span class="available">متاح الآن</span>
+    <img src="../images1/Room/room8.jpg" class="img-sea sea3" alt="إطلالة بحرية">
+    <img src="../images1/Room/room7.jpg" class="img-garden garden3" alt="إطلالة على الحديقة">
+    <img src="../images1/Room/room9.jpg" class="img-back back3" alt="إطلالة خلفية">
+  </div>
+
+    <h2>جناح فاخر</h2>
+
+    <div class="views-list">
+      <label for="sea3" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على البحر</span>
+      </label>
+      <label for="garden3" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة على الحديقة</span>
+      </label>
+      <label for="back3" class="view-dot">
+        <span class="dot"></span>
+        <span class="dot-name">إطلالة خلفية</span>
+      </label>
+    </div>
+
+    <div class="desc-container">
+      <div class="desc desc-sea">
+        <p>جناح فاخر مع إطلالة كاملة على البحر وشرفة واسعة.</p>
+        <div class="price">السعر: <strong>5000 جنيه / الليلة</strong></div>
+      </div>
+      <div class="desc desc-garden">
+        <p>جناح يطل على الحديقة مع غرفة جلوس منفصلة ومطبخ صغير.</p>
+        <div class="price">السعر: <strong>4800 جنيه / الليلة</strong></div>
+      </div>
+      <div class="desc desc-back">
+        <p>إطلالة خلفية هادئة مع أثاث فاخر ومكتب عمل.</p>
+        <div class="price">السعر: <strong>4500 جنيه / الليلة</strong></div>
+      </div>
+    </div>
+
+    <label for="more3" class="more-btn">تعرف على المزيد</label>
+
+    <div class="more-details">
+      <div class="details details-sea">
+        <p>جناح فاخر واسع يحتوي على غرفة نوم مزدوجة، صالة جلوس كبيرة، شرفة مطلة على البحر مباشرة حيث يمكنك الاستمتاع بغروب الشمس. الجناح مزود بمطبخ صغير مجهز بالكامل، جاكوزي فاخر، تلفاز ذكي، واي فاي سريع، مكتب عمل، ومنطقة لتناول الطعام. الحمام يحتوي على دش مطري، حوض جاكوزي، ومستلزمات استحمام فاخرة. الديكور عصري وألوان هادئة، مع تهوية طبيعية وإضاءة دافئة، مثالي للعائلات أو الأزواج الباحثين عن رفاهية وراحة.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-garden">
+        <p>جناح واسع للعائلات يحتوي على غرفة نوم مزدوجة، صالة جلوس، مكتب للعمل، منطقة لتناول الطعام، شرفة مطلة على الحديقة، وحمام كبير مع جاكوزي. يوفر الجناح أجواءً مريحة للعائلة، مع أثاث فاخر وإضاءة طبيعية رائعة. يحتوي على تلفاز ذكي، واي فاي، وثلاجة صغيرة. الإطلالة على الحديقة توفر إحساسًا بالاسترخاء والراحة بعيدًا عن ضوضاء المدينة.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+      <div class="details details-back">
+        <p>جناح فاخر هادئ مع أثاث راقٍ ومساحة واسعة للمعيشة والعمل، يحتوي على غرفة نوم مزدوجة، صالة جلوس، مكتب، تلفاز ذكي، واي فاي، وحمام مجهز بجاكوزي فاخر. الإضاءة الطبيعية تدخل من النوافذ الكبيرة، مع إضاءة ليلية دافئة للاسترخاء. الجناح مثالي للنزلاء الذين يبحثون عن خصوصية وراحة كاملة مع جميع وسائل الراحة الحديثة.
+        </p>
+        <a href="./booking.html"> <button  class="book-btn">احجز الآن</button></a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!--=====================الكارد================== -->
+  <!-- ======= الفوتر ======= -->
+  <footer class="text-center py-3 text-light bg-dark">
+    © 2025 Nuvea Hotel Management System. جميع الحقوق محفوظة.
+  </footer>
+
+  
+</body>
+</html>

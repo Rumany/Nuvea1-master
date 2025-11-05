@@ -1,0 +1,293 @@
+/* ملف: rooms.css */
+html {
+    scroll-behavior: smooth;
+}
+body {
+  background-image: url("../images1/lobbyarea/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-color: #000;
+  font-family: 'Cairo', sans-serif;
+}
+ 
+/* طبقة شفافة فوق الخلفية */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-color: rgba(0, 0, 0, 0.637);
+  z-index: -1;
+}
+
+/* ================= الهيدر ================= */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+
+.text1-gold {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* ====== روابط النافبار ====== */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* زر تسجيل الدخول */
+.nav-item a[href='index.html'] {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  color: #1e2a38 !important;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-item a[href='index.html']:hover {
+  background: linear-gradient(90deg, #a88c3e, #b8922b);
+  color: white !important;
+}
+
+.nav-item .login-btn {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b); /* لون ذهبي فخم */
+    color: #1e2a38;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-item .login-btn:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: #fff;
+}
+/* ================= القائمة (هامبرجر) ================= */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: #d4af37;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+/* ================= تصميم الموبايل ================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    border-top: 1px solid #d4af37;
+  }
+
+  /* لما المستخدم يضغط على ☰ */
+  #menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+/* تأثير بسيط عند ظهور القائمة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title1{
+    text-align: center;
+    margin-top: 85PX;
+    margin-bottom: 20PX;
+    color: #b8922b;
+}
+/* ===== التواصل============================ */
+/* ====== سكشن التواصل ====== */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 50px 80px;
+  color: #f6f6f6;
+}
+
+.contact-info, .contact-form {
+  background-color: rgba(26, 25, 25, 0.87);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ====== الخريطة ====== */
+.map-container {
+  margin-top: 15px;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ====== أيقونات التواصل الاجتماعي ====== */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #d4af37;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ====== نموذج التواصل ====== */
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  color: #111;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #a88c3e, #b8922b);
+  color: white;
+}
+
+
+/* ===== التواصل============================ */
+/* ===== الفوتر ===== */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* ===== تحسينات عامة للعرض المتجاوب ===== */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    .room-card img {
+        height: 180px;
+    }
+}
+
+/* ====== الموبايل ====== */
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

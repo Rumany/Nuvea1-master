@@ -1,0 +1,71 @@
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('../images1/lobbyarea/background.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* طبقة شفافة لتغميق الخلفية */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.456);
+    z-index: -1;
+}
+
+/* تنسيق اللوجو */
+.logo {
+    width: 120px;
+    opacity: 0.9; /* جعل اللون أخف قليلاً */
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4)); /* ظل ذهبي خفيف */
+}
+
+/* تنسيق الحاوية الرئيسية للكارت */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* تصميم كارت تسجيل الدخول */
+.login-card {
+    background-color: rgba(30, 30, 40, 0.9);
+    width: 350px;
+    border-radius: 15px;
+    animation: slideUp 1s ease-out;
+}
+
+/* تطبيق التدرج الذهبي على النصوص */
+.text-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* زر الدخول بلون ذهبي متدرج أنيق */
+.btn-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    border: none;
+    color: #1e2a38;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: white;
+}
+
+/* حركة ظهور الكارت عند تحميل الصفحة */
+@keyframes slideUp {
+    from { transform: translateY(60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

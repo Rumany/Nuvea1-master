@@ -1,0 +1,103 @@
+/* تنسيق عام */
+body {
+    background: url("../images1/lobbyarea/background.jpg") center/cover fixed no-repeat;
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* خلفية داكنة شفافة تغطي الصورة */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+/*  اللون الذهبي */
+.text-gold {
+       background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gold {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #b9972f;
+    color: #fff;
+}
+    
+/* الهيدر */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid #d4af37;
+}
+
+.logo {
+    width: 60px;
+    margin-left: 15px;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+
+/*  تنسيق الكروت الإحصائية */
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/*  الجدول */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #d4af37;
+    color: #000;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    transition: background 0.3s;
+}
+
+/* أزرار التحكم */
+.btn-success, .btn-danger, .btn-secondary {
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-success:hover, .btn-danger:hover {
+    transform: scale(1.05);
+}
+
+/*  الفوتر */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid hsl(46, 65%, 52%);
+}
+
+/*  تأثيرات دخول */
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+main {
+    animation: fadeInUp 1s ease;
+}

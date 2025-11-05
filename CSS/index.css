@@ -1,0 +1,385 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+  background-image: url("../images1/lobbyarea/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-color: #000;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* طبقة شفافة فوق الخلفية */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background-color: rgba(0, 0, 0, 0.404);
+  z-index: -1;
+}
+
+/* ================= الهيدر ================= */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+.text6-gold {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 65px;
+}
+
+.text5-light{
+    font-size: 25px;
+    color: #f9f7f3;
+}
+
+/*]]]]]]]]]]]]]]]]]*/
+.text-gold {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+}
+/*]]]]]]]]]]]]]]]]]*/
+.text1-gold {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* ====== روابط النافبار ====== */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* زر تسجيل الدخول */
+.nav-item a[href='index.html'] {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  color: #1e2a38 !important;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-item a[href='index.html']:hover {
+  background: linear-gradient(90deg, #a88c3e, #b8922b);
+  color: white !important;
+}
+
+.nav-item .login-btn {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b); /* لون ذهبي فخم */
+    color: #1e2a38;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-item .login-btn:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: #fff;
+}
+/* ================= القائمة (هامبرجر) ================= */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: #d4af37;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+/* ================= تصميم الموبايل ================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    border-top: 1px solid #d4af37;
+  }
+
+  /* لما المستخدم يضغط على ☰ */
+  #menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+/* تأثير بسيط عند ظهور القائمة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* المحتوى الرئيسي */
+main {
+   /* min-height: 30vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 275px;     /* المسافة من الأعلى */
+    margin-bottom: 275px;  /* المسافة من الأسفل */
+}
+
+.btn-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    border: none;
+    color: #1e2a38;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top:75px;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: white;
+}
+
+.bottn-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*======================================*/
+/* ---------- سكشن فخم ---------- */
+.luxury-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #ffffff;
+  padding: 100px 10%;
+  border-top: 2px solid #b58d2b22;
+  margin: opx 0; /* المسافة بين السكشنات */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.luxury-content {
+  flex: 1;
+  color: #333;
+}
+
+.luxury-content h2 {
+  font-size: 36px;
+  color: #b58d2b;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.luxury-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.discover-btn {
+  background: #b58d2b;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.discover-btn:hover {
+  background: #a27c1f;
+  transform: translateY(-2px);
+}
+
+/* --- معرض الصور --- */
+.luxury-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.luxury-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
+  filter: brightness(90%);
+}
+
+.luxury-gallery img:hover {
+  transform: scale(1.03);
+  filter: brightness(100%);
+}
+
+/* جعل السكشن متجاوب */
+@media (max-width: 900px) {
+  .luxury-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .luxury-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*======================================*/
+
+/* قسم المميزات */
+#features {
+    background-image: url("../images1/RoomSuite/pexels-ron-lach-10260856.jpg");
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.feature-box {
+    background-color: rgba(40, 40, 50, 0.9);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 60px;
+}
+
+.text-muted {
+    color: #ffffff !important;
+}
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.feature-box i {
+    font-size: 3rem;
+}
+
+/* قسم آراء العملاء */
+#reviews {
+    background-color: rgba(20, 20, 30, 0.9);
+}
+
+.review-card {
+    background-color: rgba(30, 30, 40, 0.9);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.review-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+}
+
+/* قسم عن الفندق */
+#about {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#about img {
+    width: 100%;             /* يخلي الصورة تاخد عرض العمود بالكامل */
+    height: 250px;           /* ارتفاع ثابت لكل الصور */
+    object-fit: cover; 
+    transition: transform 0.3s;
+    border-radius: 15px;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+/* الفوتر */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* حركة الظهور */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

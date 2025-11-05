@@ -1,0 +1,439 @@
+/* ملف: rooms.css */
+html {
+    scroll-behavior: smooth;
+}
+body {
+  background-image: url("../images1/lobbyarea/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-color: #000;
+  font-family: 'Cairo', sans-serif;
+}
+ 
+/* طبقة شفافة فوق الخلفية */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135%;
+  background-color: rgba(0, 0, 0, 0.637);
+  z-index: -1;
+}
+
+/* ================= الهيدر ================= */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+
+.text1-gold {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* ====== روابط النافبار ====== */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* زر تسجيل الدخول */
+.nav-item a[href='index.html'] {
+  background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+  color: #1e2a38 !important;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-item a[href='index.html']:hover {
+  background: linear-gradient(90deg, #a88c3e, #b8922b);
+  color: white !important;
+}
+
+.nav-item .login-btn {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b); /* لون ذهبي فخم */
+    color: #1e2a38;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-item .login-btn:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: #fff;
+}
+/* ================= القائمة (هامبرجر) ================= */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: #d4af37;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+/* ================= تصميم الموبايل ================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    border-top: 1px solid #d4af37;
+  }
+
+  /* لما المستخدم يضغط على ☰ */
+  #menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+/* تأثير بسيط عند ظهور القائمة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*===============كارد==========*/
+
+h1.title {
+  text-align: center;
+  color: #d4af37;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+/* ---------- شبكة الكروت ---------- */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+/* ---------- الكارد ---------- */
+.room-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-card h2 {
+  margin: 15px 20px 10px;
+  color: #222;
+  font-size: 20px;
+}
+
+/* ---------- الصور ---------- */
+.image-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  transition: 0.3s;
+}
+
+.image-container .available {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* عرض الصورة حسب الإطلالة */
+#sea1:checked ~ .image-container .img-sea,
+#garden1:checked ~ .image-container .img-garden,
+#back1:checked ~ .image-container .img-back {
+  display: block;
+}
+
+/* كارد 2 */
+#sea2:checked ~ .image-container .sea2,
+#garden2:checked ~ .image-container .garden2,
+#back2:checked ~ .image-container .back2 {
+  display: block;
+} 
+
+/* كارد 3 */
+#sea3:checked ~ .image-container .sea3,
+#garden3:checked ~ .image-container .garden3,
+#back3:checked ~ .image-container .back3 {
+  display: block;
+}
+/* ---------- النقاط ---------- */
+.views-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.view-dot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.dot-name {
+  font-weight: bold;
+  color: #555;
+}
+
+/* تغيير عند الاختيار */
+input#sea1:checked ~ .views-list label[for="sea1"] .dot,
+input#garden1:checked ~ .views-list label[for="garden1"] .dot,
+input#back1:checked ~ .views-list label[for="back1"] .dot,
+input#sea2:checked ~ .views-list label[for="sea2"] .dot,
+input#garden2:checked ~ .views-list label[for="garden2"] .dot,
+input#back2:checked ~ .views-list label[for="back2"] .dot,
+input#sea3:checked ~ .views-list label[for="sea3"] .dot,
+input#garden3:checked ~ .views-list label[for="garden3"] .dot,
+input#back3:checked ~ .views-list label[for="back3"] .dot {
+  background: #b58d2b;
+  border-color: #b58d2b;
+}
+
+input#sea1:checked ~ .views-list label[for="sea1"] .dot-name,
+input#garden1:checked ~ .views-list label[for="garden1"] .dot-name,
+input#back1:checked ~ .views-list label[for="back1"] .dot-name,
+input#sea2:checked ~ .views-list label[for="sea2"] .dot-name,
+input#garden2:checked ~ .views-list label[for="garden2"] .dot-name,
+input#back2:checked ~ .views-list label[for="back2"] .dot-name,
+input#sea3:checked ~ .views-list label[for="sea3"] .dot-name,
+input#garden3:checked ~ .views-list label[for="garden3"] .dot-name,
+input#back3:checked ~ .views-list label[for="back3"] .dot-name {
+  color: #b58d2b;
+}
+
+/* ---------- الوصف ---------- */
+.desc-container {
+  position: relative;
+  min-height: 80px;
+  padding: 0 20px;
+}
+
+.desc {
+  display: none;
+}
+
+#sea1:checked ~ .desc-container .desc-sea,
+#garden1:checked ~ .desc-container .desc-garden,
+#back1:checked ~ .desc-container .desc-back,
+#sea2:checked ~ .desc-container .desc-sea,
+#garden2:checked ~ .desc-container .desc-garden,
+#back2:checked ~ .desc-container .desc-back,
+#sea3:checked ~ .desc-container .desc-sea,
+#garden3:checked ~ .desc-container .desc-garden,
+#back3:checked ~ .desc-container .desc-back {
+  display: block;
+}
+
+.desc p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.price {
+  margin-top: 5px;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+
+
+/* ---------- زر تعرف على المزيد ---------- */
+.more-btn {
+  /*margin: 15px 150px 0;*/
+  background: rgba(207, 207, 206, 0.219);
+  color: #020202;
+  border: 1px solid #000000;
+  /*padding:  12px 40px;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  margin-right: 120px;  /*اتجاه الزر من اليمين*/
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.more-btn:hover {
+  background: #e6c200;
+  color: #fff;
+}
+
+/* ---------- التفاصيل ---------- */
+.more-details {
+  display: none;
+  background: #f1f6ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.details {
+  display: none;
+}
+
+/* عرض التفاصيل حسب الإطلالة */
+#sea1:checked ~ .more-details .details-sea,
+#garden1:checked ~ .more-details .details-garden,
+#back1:checked ~ .more-details .details-back,
+#sea2:checked ~ .more-details .details-sea,
+#garden2:checked ~ .more-details .details-garden,
+#back2:checked ~ .more-details .details-back,
+#sea3:checked ~ .more-details .details-sea,
+#garden3:checked ~ .more-details .details-garden,
+#back3:checked ~ .more-details .details-back {
+  display: block;
+}
+
+/* عند الضغط على "تعرف على المزيد" */
+#more1:checked ~ .more-details,
+#more2:checked ~ .more-details,
+#more3:checked ~ .more-details {
+  display: block;
+}
+
+#more1:checked ~ .more-btn,
+#more2:checked ~ .more-btn,
+#more3:checked ~ .more-btn {
+  display: none;
+}
+
+/* ---------- زر الحجز ---------- */
+.book-btn {
+  width: 100%;
+  background: #FFD700;
+  color: #000;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  background: #e6c200;
+}
+
+/*===============كارد==========*/
+/* ===== الفوتر ===== */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* ===== تحسينات عامة للعرض المتجاوب ===== */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    .room-card img {
+        height: 180px;
+    }
+}

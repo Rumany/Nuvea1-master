@@ -1,0 +1,139 @@
+.btn-gold {
+    /* أساسيات لجعله يبدو كزر */
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: #212529;
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    /* خصائص الـ w-100 والـ mt-3 */
+    width: 100%;
+    margin-top: 1rem; /* تقريباً 16 بكسل لـ mt-3 */
+    
+    /* الخصائص الأساسية للرابط */
+    display: block; /* لجعله يأخذ عرض 100% */
+    text-align: center;
+    text-decoration: none; /* لإزالة الخط تحت الرابط */
+}
+
+
+
+
+/* هذا الملف خاص بتنسيق صفحة الحجز في نظام Nuvea Hotel */
+
+/* إعداد خلفية الصفحة */
+body {
+    background: url('../images1/lobbyarea/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* طبقة شفافة فوق الخلفية لإعطاء تأثير داكن */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/*=============================*/
+
+/* الهيدر */
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    width: 60px;
+    margin-left: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+
+/* اللون الذهبي المستخدم في هوية Nuvea */
+.text-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gold {
+    background-color: #d4af37;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #c09b2c;
+    color: #fff;
+}
+
+/* الكارد الخاص بالفورم */
+.booking-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid #d4af37;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* تنسيق النصوص */
+.text-light {
+    color: #fff !important;
+}
+
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 10px #d4af37;
+}
+
+/* زر تسجيل الخروج */
+.nav-link.bg-warning {
+       background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    color: #1e2a38 !important;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link.bg-warning:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: white !important;
+}
+
+
+/* الفوتر */
+/*footer {
+    background-color: rgba(0, 0, 0, 0.6);
+}*/
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    z-index: 1000;
+}
+
